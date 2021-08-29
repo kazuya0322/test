@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="model.User" %>
-<%
-User registerUser = (User) session.getAttribute("registerUser");
-%>
+<%-- <% 
+// User registerUser = (User) session.getAttribute("registerUser");
+%> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +13,9 @@ User registerUser = (User) session.getAttribute("registerUser");
 <body>
 <p>下記のユーザを登録します。</p>
 <p>
-ログインID:<%= registerUser.getId() %><br>
+<%-- ログインID:<%= registerUser.getId() %><br> --%>
 <%-- 名前:<%= registerUser.getName() %><br> --%>
+ログインID:${registerUser.id}<br>
 名前:${registerUser.name} 様<br>
 </p>
 <a href="/GitTest/RegisterUser">戻る</a>
